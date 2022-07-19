@@ -1,6 +1,8 @@
-const { defaultTheme } = require('vuepress')
-const navbar = require('./config/navbar')
-const sidebar = require('./config/sidebar')
+import { defaultTheme } from 'vuepress'
+import { path } from '@vuepress/utils'
+import navbar from './config/navbar'
+// @ts-ignore
+import sidebar from './config/sidebar'
 
 module.exports = {
   lang: 'zh-CN',
@@ -18,5 +20,13 @@ module.exports = {
       '看起来我们进入了错误的链接',
     ],
     backToHome: '返回首页',
-  })
+  }),
+  plugins: [
+    [
+      '@vuepress/plugin-register-components',
+      {
+        componentsDir: path.resolve(__dirname, './components')
+      }
+    ],
+  ]
 }

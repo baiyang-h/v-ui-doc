@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     text: '首页',
     link: '/',
@@ -14,7 +14,7 @@ module.exports = [
   },
   {
     text: '组件',
-    link: '/components'
+    link: '/component'
   },
   {
     text:'文档',
