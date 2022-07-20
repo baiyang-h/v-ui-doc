@@ -1,72 +1,19 @@
-# 多语言支持
+# Form 表单
 
-## 站点多语言配置
+表单包含 输入框, 单选框, 下拉选择, 多选框 等用户输入的组件。 使用表单，您可以收集、验证和提交数据。
 
-要启用 VuePress 的多语言支持，首先需要使用如下的文件目录结构：
+## 典型表单
 
-```
-docs
-├─ README.md
-├─ foo.md
-├─ nested
-│  └─ README.md
-└─ zh
-   ├─ README.md
-   ├─ foo.md
-   └─ nested
-      └─ README.md
-```
+@[code](../examples/form/base-form.vue)
 
-然后，在你的 [配置文件](./configuration.md#配置文件) 中设置 `locales` 选项：
+## 表单控件事件
 
-```js
-module.exports = {
-  locales: {
-    // 键名是该语言所属的子路径
-    // 作为特例，默认语言可以使用 '/' 作为其路径。
-    '/': {
-      lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator',
-    },
-    '/zh/': {
-      lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器',
-    },
-  },
-}
-```
+## 布局
 
-如果一个语言没有声明 `lang`, `title`, `description` 或者 `head` ，VuePress 将会尝试使用顶层配置的对应值。如果每个语言都声明了这些值，那么顶层配置中的对应值可以被省略。
+### 布局一
+### 布局二
+### 布局三
 
-::: tip
-配置参考： [locales](../reference/config.md#locales)
-:::
+## 插槽
 
-## 主题多语言配置
-
-VuePress 没有限制主题如何提供多语言支持，因此每个主题可能会有不同的多语言配置方式，而且部分主题可能不会提供多语言支持。建议你查看主题本身的文档来获取更详细的指引。
-
-如果你使用的是默认主题，那么它提供多语言支持的方式和上述是一致的：
-
-```js
-const { defaultTheme } = require('vuepress')
-
-module.exports = {
-  theme: defaultTheme({
-    locales: {
-      '/': {
-        selectLanguageName: 'English',
-      },
-      '/zh/': {
-        selectLanguageName: '简体中文',
-      },
-    },
-  }),
-}
-```
-
-::: tip
-配置参考： [默认主题 > locales](../reference/default-theme/config.md#locales)
-:::
+## 默认按钮
