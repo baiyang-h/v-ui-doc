@@ -4,11 +4,11 @@
 
 ## 基础表格
 
-基础的表格展示用法。
+基础的表格展示用法。 
 
-:::demo 使用 `data`、`option` 属性来定义 Table 表格
+使用 `data`、`option` 属性来定义 Table 表格
+
 @[code](../examples/table/base-table.vue)
-:::
 
 ## 带斑马纹表格
 
