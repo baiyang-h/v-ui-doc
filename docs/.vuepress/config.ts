@@ -1,13 +1,12 @@
 import { defaultTheme } from 'vuepress'
 import { path } from '@vuepress/utils'
 import navbar from './config/navbar'
-// @ts-ignore
 import sidebar from './config/sidebar'
 
 module.exports = {
   lang: 'zh-CN',
-  title: '123',
-  description: '组件库',
+  title: '图一乐',
+  description: '通用组件、业务组件、工具方法等',
   theme: defaultTheme({
     // 默认主题配置
     navbar,
