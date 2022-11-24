@@ -1,9 +1,14 @@
 import { defaultTheme } from 'vuepress'
-import { path } from '@vuepress/utils'
+// @ts-ignore
+import { getDirname, path } from '@vuepress/utils'
 import navbar from './config/navbar'
 import sidebar from './config/sidebar'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
-module.exports = {
+// @ts-ignore
+const __dirname = getDirname(import.meta.url)
+
+export default {
   lang: 'zh-CN',
   title: '图一乐',
   description: '通用组件、业务组件、工具方法等',
@@ -21,11 +26,8 @@ module.exports = {
     backToHome: '返回首页',
   }),
   plugins: [
-    [
-      '@vuepress/plugin-register-components',
-      {
-        componentsDir: path.resolve(__dirname, './components')
-      }
-    ],
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
+    })
   ]
 }
