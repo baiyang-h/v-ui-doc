@@ -4,4 +4,4 @@
 
 ## 典型表单
 
-@[code](../examples/form/base-form.vue)
+@[code](../../examples/form/base-form.vue)

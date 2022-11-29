@@ -14,10 +14,10 @@ export default [
   },
   {
     text: '组件',
-    link: '/component'
+    link: '/md/components'
   },
   {
     text:'文档',
-    link: '/document'
+    link: '/md/document'
   }
 ]

@@ -4,6 +4,7 @@ import { getDirname, path } from '@vuepress/utils'
 import navbar from './config/navbar'
 import sidebar from './config/sidebar'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import vuepressPluginDemoBlockPlus from './plugins/vuepress-plugin-demoblock-plus'
 
 // @ts-ignore
 const __dirname = getDirname(import.meta.url)
@@ -28,6 +29,7 @@ export default {
   plugins: [
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components'),
-    })
+    }),
+    vuepressPluginDemoBlockPlus()
   ]
 }

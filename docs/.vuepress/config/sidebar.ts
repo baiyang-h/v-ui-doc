@@ -1,11 +1,11 @@
 export default {
-  '/component/': [
+  '/md/components': [
     {
       text: '组件',
       children: [
-        '/component/README.md',
-        '/component/table.md',
-        '/component/form.md',
+        '/md/components/README.md',
+        '/md/components/table.md',
+        '/md/components/form.md',
       ]
     }
   ]
