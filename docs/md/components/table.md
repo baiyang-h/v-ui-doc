@@ -24,6 +24,4 @@ const handleClick = () => {
 :::
 
 
-
-
-[comment]: <> (@[code]&#40;../../examples/table/base-table.vue&#41;)<script>
+[comment]: <> (@[code]&#40;../../examples/table/base-table.vue&#41;)

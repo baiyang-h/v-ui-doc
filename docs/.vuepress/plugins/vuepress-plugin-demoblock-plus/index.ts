@@ -11,11 +11,14 @@ const vuepressPluginDemoBlockPlus = () => {
                 render(tokens, idx) {
                     const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
                     if (tokens[idx].nesting === 1) {
+                        const description = md.utils.escapeHtml(m[1])  // 描述内容
                         // 开始标签
-                        return '<div><span>' + md.utils.escapeHtml(m[1]) + '</span>\n';
+                        return `<vp-demo
+                            description="${encodeURIComponent(md.render(description))}"
+                        >`;
                     } else {
                         // 结束标签
-                        return '</div>\n';
+                        return `</vp-demo>`;
                     }
                 }
             })

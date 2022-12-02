@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <p text="sm" v-html="decodedDescription" />213
+    <p text="sm" v-html="decodedDescription" />
   </ClientOnly>
 </template>
 
@@ -10,6 +10,5 @@ import { computed } from 'vue'
 const props = defineProps({
   description: String
 })
-
 const decodedDescription = computed(() => decodeURIComponent(props.description))
 </script>
