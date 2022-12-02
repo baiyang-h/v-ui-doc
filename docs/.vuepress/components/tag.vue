@@ -1,12 +1,3 @@
 <template>
-  <div class="tag">
-    我是标签
-    <slot />
-  </div>
+  <div>tag</div>
 </template>
-
-<script>
-export default {
-  name: "tag",
-};
-</script>
