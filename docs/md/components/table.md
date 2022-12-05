@@ -8,18 +8,7 @@
 
 :::demo Use `type`, `plain`, `round` and `circle` to define Button's style.
 
-```vue
-<template>
-  <el-button type="primary" @click="handleClick">111</el-button>
-  <el-button type="success">Success</el-button>
-</template>
-
-<script setup>
-const handleClick = () => {
-  console.log(111)
-}
-</script>
-```
+table/base-table
 
 :::
 
